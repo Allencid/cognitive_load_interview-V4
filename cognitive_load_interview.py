@@ -84,19 +84,19 @@ elif st.session_state.stage == "segmentation":
 
     # 補問 1
     st.subheader("🔍 延伸補問區")
-    with st.expander("補問 1️⃣：這些事情發生之前，有沒有什麼你覺得相關的事？"):
+    with st.expander("補問 1️⃣：這些事情發生之前的任何事情，你可以跟我說得更仔細一點嗎？"):
         q1 = "在這些事情發生之前，有沒有什麼你覺得相關的事？例如事情的起因、當時的背景、前一天發生什麼..."
         a1 = st.text_area("回答：", key="before_event")
         responses.append(("補問1 - 該事件前的事", q1, a1))
 
     # 補問 2
-    with st.expander("補問 2️⃣：事情發生後，你做了什麼？或別人做了什麼？"):
+    with st.expander("補問 2️⃣：事情發生之後的任何事情，你可以跟我說得更仔細一點嗎？"):
         q2 = "在這些事情發生之後，你做了什麼？或別人做了什麼？例如你有沒有講出去、處理後果、跟誰討論..."
         a2 = st.text_area("回答：", key="after_event")
         responses.append(("補問2 - 該事件後的事", q2, a2))
 
     # 補問 3
-    with st.expander("補問 3️⃣：你還可以想到什麼事讓大家相信你說的是實話？"):
+    with st.expander("補問 3️⃣：為了讓所有調查這個案件的人可以更加相信你說的是實話，你還可以想到什麼事情可以跟我說的嗎？任何事情都可以？"):
         q3 = "為了讓所有調查這個案件的人可以更加相信你說的是實話，你還可以想到什麼事情可以跟我說的嗎？任何事情都可以？"
         a3 = st.text_area("回答：", key="credibility")
         responses.append(("補問3 - 鼓勵誠實補充", q3, a3))
